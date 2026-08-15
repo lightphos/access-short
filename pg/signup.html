@@ -1,0 +1,24 @@
+<html>
+<header>
+
+</header>
+<body>    
+<h1>Sign Up</h1>
+
+</body>
+
+<script type="module">
+import { sh } from '../short-api.js'
+
+const pg = `
+<form>
+    <p>${sh.inp({lbl: 'Username', ph: 'username'})}</p>
+    <p>${sh.inp({lbl: 'Password', ph: 'password', ty: 'password'})}</p>
+    <p>${sh.inp({lbl: 'Confirm', ph: 'password', ty: 'password'})}</p>
+    ${sh.btn({txt:"submit", clk:"/"})}
+</form>
+ ${sh.lnk({ref:"/pg/signin", txt:"sign in"})}
+`
+sh.fix(pg)
+</script>
+</html>
