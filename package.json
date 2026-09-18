@@ -5,7 +5,7 @@
     "clean": "bun -e \"for (const dir of ['dist', '.short']) require('node:fs').rmSync(dir, { recursive: true, force: true })\""
   },
   "dependencies": {
-    "@reuelworks/short": "^1.0.0-beta.2",
+    "@reuelworks/short": "^1.0.0-beta.4",
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
   },
