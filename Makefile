@@ -1,9 +1,10 @@
-
-all:
-	npx http-server . -p 5000 --cors -c-1
+.PHONY: twi tw install
 
 twi:
 	npm install tailwindcss @tailwindcss/cli
 
 tw:
-	npx @tailwindcss/cli -i ./style-i.css -o ./style-o.css --watch
+	bunx @tailwindcss/cli -i ./app.tcss -o ./app.css --watch
+
+install:
+	bun add @reuelworks/short@beta

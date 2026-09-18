@@ -1,7 +1,16 @@
 {
+  "scripts": {
+    "dev": "bunx short --root app --port 3001",
+    "build": "bunx short app --root . --out ./dist",
+    "clean": "bun -e \"for (const dir of ['dist', '.short']) require('node:fs').rmSync(dir, { recursive: true, force: true })\""
+  },
   "dependencies": {
+    "@reuelworks/short": "^1.0.0-beta.2",
     "@tailwindcss/cli": "^4.3.3",
     "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "bun": "^1.4.2"
   },
   "allowScripts": {
     "@parcel/watcher@2.5.1": true
